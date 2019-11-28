@@ -1,0 +1,11 @@
+public Boolean removeBook(String data[]) {
+ Factory factory = new Factory();
+ Book newbook;
+ newbook = factory.createBook(data);
+ if (findBook(newbook) != null) {
+ int index = books.indexOf(newbook);
+ books.remove(index);
+ return true;
+ }
+ return false;
+ }
