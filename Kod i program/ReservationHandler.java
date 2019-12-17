@@ -2,7 +2,8 @@ public class ReservationHandler{
 	
 	private User user;
     private ReservationView reservationView;
-    privete ReservationFinder reservationFinder;
+    private ReservationFinder reservationFinder;
+    
 	public searchReservationClick(){
         String arrival = reservationView.getArrival();
         String departure = reservationView.getDeparture();
@@ -21,5 +22,7 @@ public class ReservationHandler{
     public makeReservationClick(Reservation reservation){
         reservationFinder.makeReservation(reservation);
     }
-	public setUser(User)
+	public setUser(User user){
+        this.user = user;
+    }
 }
